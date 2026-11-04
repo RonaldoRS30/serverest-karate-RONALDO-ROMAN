@@ -36,10 +36,10 @@ mvn test
 
 El runner `UsuariosTest` ejecuta solo los features de `src/test/java/usuarios`. El feature `helpers/crear-usuario.feature` no corre solo: lo llaman los escenarios que necesitan un usuario ya creado.
 
-Al terminar, el reporte HTML queda en:
+Al terminar, el reporte HTML queda en la carpeta `karate-reports` del proyecto:
 
 ```text
-target/karate-reports/karate-summary.html
+karate-reports/karate-summary.html
 ```
 
 La última ejecución de esta suite dejó 22 escenarios en verde. El detalle está en [INFORME.md](INFORME.md).
@@ -47,6 +47,7 @@ La última ejecución de esta suite dejó 22 escenarios en verde. El detalle est
 ## Estructura
 
 ```text
+karate-reports/                      Reporte HTML de la última ejecución
 src/test/java/
 ├── karate-config.js                 URL base y timeouts
 ├── logback-test.xml

@@ -129,7 +129,7 @@ Cada fila de la tabla indica `campoError` y `mensajeError`. El escenario comprue
 Comando: `mvn test`  
 Resultado: 22 escenarios, 0 fallos, 0 errores.  
 Duración aproximada: 29 segundos.  
-Reporte: `target/karate-reports/karate-summary.html`
+Reporte: `karate-reports/karate-summary.html`
 
 La suite depende de la API pública. Un fallo de red o un cambio de mensaje en ServeRest haría fallar el escenario que compara ese texto.
 

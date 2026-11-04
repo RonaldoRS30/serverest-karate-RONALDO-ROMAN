@@ -7,6 +7,9 @@ class UsuariosTest {
     @Karate.Test
     Karate testUsuarios() {
         // Ejecuta todos los .feature de la carpeta "usuarios"
-        return Karate.run("classpath:usuarios");
+        // El reporte HTML queda en karate-reports/ para que forme parte del proyecto
+        return Karate.run("classpath:usuarios")
+                .reportDir("karate-reports")
+                .backupReportDir(false);
     }
 }
