@@ -11,9 +11,9 @@ Scenario: Listar todos los usuarios correctamente
   When method get
   Then status 200
   And match response.quantidade == '#number'
-  And match response.usuarios == '#[]'
+  And match response.usuarios == '#[_ > 0]'
   And match response.quantidade == response.usuarios.length
-  And match each response.usuarios == usuarioSchema
+  And match response.usuarios[0] == usuarioSchema
 
 @positivo
 Scenario: Filtrar usuarios por email

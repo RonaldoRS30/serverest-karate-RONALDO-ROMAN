@@ -10,6 +10,6 @@
     <appender-ref ref="STDOUT" />
   </root>
 
-  <logger name="com.intuit.karate" level="DEBUG" />
+  <logger name="com.intuit.karate" level="INFO" />
   <logger name="org.thymeleaf" level="WARN" />
 </configuration>

@@ -26,7 +26,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 });
 </script>
 
-    <title>usuarios.get-usuario-por-id</title>
+    <title>resources.features.get-usuario-por-id</title>
   </head>
   <body>
     <div id="root-container">
@@ -49,16 +49,16 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div>Scenarios</div>
   </div>
   <div id="nav-date">
-    <div>2026-11-03 09:30:50 p. m.</div>
+    <div>2026-11-04 04:00:32 a. m.</div>
   </div>
 </div>
 
         <div class="nav-container">
           <div class="nav-item passed">
-            <a href="#[1:12]"><span>[1:12]</span> <span>Buscar un usuario existente por su ID</span></a>
+            <a href="#[1:9]"><span>[1:9]</span> <span>Buscar un usuario existente por su ID</span></a>
           </div>
           <div class="nav-item passed">
-            <a href="#[2:28]"><span>[2:28]</span> <span>Buscar un usuario con un ID que no existe</span></a>
+            <a href="#[2:23]"><span>[2:23]</span> <span>Buscar un usuario con un ID que no existe</span></a>
           </div>
         </div>
       </div>
@@ -67,48 +67,41 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
           <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
           <span class="feature-label">Feature:</span>
-          <span class="feature-path">usuarios/get-usuario-por-id.feature</span><span class="feature-label">|</span>
+          <span class="feature-path">resources/features/get-usuario-por-id.feature</span><span class="feature-label">|</span>
           <span class="feature-name">Buscar usuario por ID (GET /usuarios/{_id})</span>
           <span class="feature-description"></span>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[1:12]">
+          <div class="scenario-heading" id="[1:9]">
             <div class="heading-container">
               <div class="scenario-tags">
                 <a class="badge badge-primary" href="karate-tags.html">positivo</a>
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[1:12]</span>
+                Scenario: <span>[1:9]</span>
                 <span class="scenario-name">Buscar un usuario existente por su ID</span>
                 <span></span>
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>1052</span>
+              <span>ms:</span>&nbsp;<span>1198</span>
             </div>
           </div>
           <div class="step-row">
-            <div class="step-container" id="[1:12]bg">
+            <div class="step-container" id="[1:9]bg">
               <div class="step-ref bg-step">&gt;&gt;</div>
               <div class="step-cell passed">Background:</div>
             </div>
             <div class="time-cell passed"></div>
           </div>
-          <div data-parent="[1:12]bg"><div>
+          <div data-parent="[1:9]bg"><div>
+  
+
   
 
   <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment"># URL base definida en karate-config.js</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row">
-    <div class="step-container" id="0.5">
-      <div class="step-ref bg-step">5</div>
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>url baseUrl</span>
@@ -129,24 +122,17 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[1:12]bg"><div>
+          <div data-parent="[1:9]bg"><div>
+  
+
   
 
   <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment"># Esquema JSON de un usuario</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row">
-    <div class="step-container" id="0.7">
-      <div class="step-ref bg-step">7</div>
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def usuarioSchema = read(&#39;classpath:schemas/usuario-schema.json&#39;)</span>
+        <span>*</span>&nbsp;<span>def usuarioSchema = read(&#39;classpath:resources/request/usuario-schema.json&#39;)</span>
       </div>
     </div>
     <div class="time-cell passed">3</div>
@@ -164,24 +150,17 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[1:12]bg"><div>
+          <div data-parent="[1:9]bg"><div>
+  
+
   
 
   <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment"># Feature reutilizable: crea un usuario y devuelve idUsuario y cuerpoUsuario</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row">
-    <div class="step-container" id="0.9">
-      <div class="step-ref bg-step">9</div>
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def crearUsuario = read(&#39;classpath:helpers/crear-usuario.feature&#39;)</span>
+        <span>*</span>&nbsp;<span>def crearUsuario = read(&#39;classpath:resources/helpers/crear-usuario.feature&#39;)</span>
       </div>
     </div>
     <div class="time-cell passed">2</div>
@@ -205,14 +184,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.13">
-      <div class="step-ref passed">13</div>
+    <div class="step-container" id="0.10">
+      <div class="step-ref passed">10</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def creado = call crearUsuario</span>
       </div>
     </div>
-    <div class="time-cell passed">527</div>
+    <div class="time-cell passed">542</div>
   </div>
 
    
@@ -226,32 +205,53 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   <div>
         
     <div class="step-row">
-      <div class="step-container" id="0.13.0.call">
+      <div class="step-container" id="0.10.0.call">
         <div class="step-ref passed">&gt;&gt;</div>
         <div class="step-indent"></div>
-        <div class="step-cell passed">helpers.crear-usuario</div>
+        <div class="step-cell passed">resources.helpers.crear-usuario</div>
       </div>
-      <div class="time-cell passed">519</div>
+      <div class="time-cell passed">537</div>
     </div>
     <div>
       <div><div>
   
 
-  <div class="step-row" data-parent="0.13.0.call">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      <div class="step-indent"></div>
-      <div class="step-cell comment"># Genera datos únicos para que cada llamada cree un usuario distinto</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
+  
 
-  <div class="step-row" data-parent="0.13.0.call">
-    <div class="step-container" id="0.13.0.call.0.5">
+  <div class="step-row" data-parent="0.10.0.call">
+    <div class="step-container" id="0.10.0.call.0.5">
       <div class="step-ref passed">5</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def Gen = Java.type(&#39;helpers.DataGenerator&#39;)</span>
+        <span>*</span>&nbsp;<span>def Gen = Java.type(&#39;karate.util.DataGenerator&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.10.0.call">
+    <div class="step-container" id="0.10.0.call.0.6">
+      <div class="step-ref passed">6</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def cuerpoUsuario = { nome: &#39;#(Gen.randomName())&#39;, email: &#39;#(Gen.randomEmail())&#39;, password: &#39;teste123&#39;, administrador: &#39;true&#39; }</span>
       </div>
     </div>
     <div class="time-cell passed">2</div>
@@ -274,36 +274,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="step-row" data-parent="0.13.0.call">
-    <div class="step-container" id="0.13.0.call.0.6">
-      <div class="step-ref passed">6</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def cuerpoUsuario = { nome: &#39;#(Gen.randomName())&#39;, email: &#39;#(Gen.randomEmail())&#39;, password: &#39;teste123&#39;, administrador: &#39;true&#39; }</span>
-      </div>
-    </div>
-    <div class="time-cell passed">3</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="0.13.0.call">
-    <div class="step-container" id="0.13.0.call.0.7">
+  <div class="step-row" data-parent="0.10.0.call">
+    <div class="step-container" id="0.10.0.call.0.7">
       <div class="step-ref passed">7</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
@@ -330,15 +302,15 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="step-row" data-parent="0.13.0.call">
-    <div class="step-container" id="0.13.0.call.0.8">
+  <div class="step-row" data-parent="0.10.0.call">
+    <div class="step-container" id="0.10.0.call.0.8">
       <div class="step-ref passed">8</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
         <span>And</span>&nbsp;<span>path &#39;usuarios&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -358,8 +330,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="step-row" data-parent="0.13.0.call">
-    <div class="step-container" id="0.13.0.call.0.9">
+  <div class="step-row" data-parent="0.10.0.call">
+    <div class="step-container" id="0.10.0.call.0.9">
       <div class="step-ref passed">9</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
@@ -386,15 +358,15 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="step-row" data-parent="0.13.0.call">
-    <div class="step-container" id="0.13.0.call.0.10">
+  <div class="step-row" data-parent="0.10.0.call">
+    <div class="step-container" id="0.10.0.call.0.10">
       <div class="step-ref passed">10</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method post</span>
       </div>
     </div>
-    <div class="time-cell passed">512</div>
+    <div class="time-cell passed">531</div>
   </div>
 
    
@@ -403,36 +375,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.13.0.call.0.10">21:30:48.472 request:
-1 &gt; POST https://serverest.dev/usuarios
-1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; Content-Length: 106
-1 &gt; Host: serverest.dev
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.20.1)
-1 &gt; Accept-Encoding: gzip,deflate
-{&quot;nome&quot;:&quot;Usuario QA 6ea2fe01&quot;,&quot;email&quot;:&quot;qa_d48d84f7@test.com&quot;,&quot;password&quot;:&quot;teste123&quot;,&quot;administrador&quot;:&quot;true&quot;}
-
-21:30:48.981 response time in milliseconds: 508
-1 &lt; 201
-1 &lt; access-control-allow-origin: *
-1 &lt; x-dns-prefetch-control: off
-1 &lt; x-frame-options: SAMEORIGIN
-1 &lt; strict-transport-security: max-age=15552000; includeSubDomains
-1 &lt; x-download-options: noopen
-1 &lt; x-content-type-options: nosniff
-1 &lt; x-xss-protection: 1; mode=block
-1 &lt; content-type: application/json; charset=utf-8
-1 &lt; x-cloud-trace-context: 30e1c19338f492906f34fa516d016592
-1 &lt; date: Wed, 04 Nov 2026 02:30:48 GMT
-1 &lt; server: Google Frontend
-1 &lt; Content-Length: 82
-{
-    &quot;message&quot;: &quot;Cadastro realizado com sucesso&quot;,
-    &quot;_id&quot;: &quot;WHdedBobYC4IoenF&quot;
-}
-
-</div>   
+     
 
   
 
@@ -443,8 +386,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="step-row" data-parent="0.13.0.call">
-    <div class="step-container" id="0.13.0.call.0.11">
+  <div class="step-row" data-parent="0.10.0.call">
+    <div class="step-container" id="0.10.0.call.0.11">
       <div class="step-ref passed">11</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
@@ -469,18 +412,11 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div><div>
   
 
-  <div class="step-row" data-parent="0.13.0.call">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      <div class="step-indent"></div>
-      <div class="step-cell comment"># Estas variables quedan disponibles para quien llame a este feature</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
+  
 
-  <div class="step-row" data-parent="0.13.0.call">
-    <div class="step-container" id="0.13.0.call.0.13">
-      <div class="step-ref passed">13</div>
+  <div class="step-row" data-parent="0.10.0.call">
+    <div class="step-container" id="0.10.0.call.0.12">
+      <div class="step-ref passed">12</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def idUsuario = response._id</span>
@@ -512,14 +448,70 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.14">
-      <div class="step-ref passed">14</div>
+    <div class="step-container" id="0.11">
+      <div class="step-ref passed">11</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def idUsuario = creado.idUsuario</span>
       </div>
     </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref passed">12</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def cuerpo = creado.cuerpoUsuario</span>
+      </div>
+    </div>
     <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref passed">14</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;usuarios&#39;, idUsuario</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -544,7 +536,35 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">15</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def cuerpo = creado.cuerpoUsuario</span>
+        <span>When</span>&nbsp;<span>method get</span>
+      </div>
+    </div>
+    <div class="time-cell passed">639</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.16">
+      <div class="step-ref passed">16</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -572,10 +592,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">17</div>
       
       <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;usuarios&#39;, idUsuario</span>
+        <span>And</span>&nbsp;<span>match response == usuarioSchema</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">6</div>
   </div>
 
    
@@ -600,100 +620,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">18</div>
       
       <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method get</span>
-      </div>
-    </div>
-    <div class="time-cell passed">513</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.18">21:30:48.988 request:
-1 &gt; GET https://serverest.dev/usuarios/WHdedBobYC4IoenF
-1 &gt; Host: serverest.dev
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.20.1)
-1 &gt; Accept-Encoding: gzip,deflate
-
-
-21:30:49.498 response time in milliseconds: 509
-1 &lt; 200
-1 &lt; access-control-allow-origin: *
-1 &lt; x-dns-prefetch-control: off
-1 &lt; x-frame-options: SAMEORIGIN
-1 &lt; strict-transport-security: max-age=15552000; includeSubDomains
-1 &lt; x-download-options: noopen
-1 &lt; x-content-type-options: nosniff
-1 &lt; x-xss-protection: 1; mode=block
-1 &lt; content-type: application/json; charset=utf-8
-1 &lt; x-cloud-trace-context: 8f41bedf148ace2feb1a23d8b8926402
-1 &lt; date: Wed, 04 Nov 2026 02:30:49 GMT
-1 &lt; server: Google Frontend
-1 &lt; Content-Length: 162
-{
-    &quot;nome&quot;: &quot;Usuario QA 6ea2fe01&quot;,
-    &quot;email&quot;: &quot;qa_d48d84f7@test.com&quot;,
-    &quot;password&quot;: &quot;teste123&quot;,
-    &quot;administrador&quot;: &quot;true&quot;,
-    &quot;_id&quot;: &quot;WHdedBobYC4IoenF&quot;
-}
-
-</div>   
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.19">
-      <div class="step-ref passed">19</div>
-      
-      <div class="step-cell passed">
-        <span>Then</span>&nbsp;<span>status 200</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment"># Validamos la estructura contra el esquema</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row">
-    <div class="step-container" id="0.21">
-      <div class="step-ref passed">21</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>match response == usuarioSchema</span>
+        <span>And</span>&nbsp;<span>match response._id == idUsuario</span>
       </div>
     </div>
     <div class="time-cell passed">1</div>
@@ -714,24 +641,153 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           <div><div>
   
 
-  <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment"># Validamos que sea el mismo usuario que creamos</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
+  
 
   <div class="step-row">
-    <div class="step-container" id="0.23">
-      <div class="step-ref passed">23</div>
+    <div class="step-container" id="0.19">
+      <div class="step-ref passed">19</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>match response._id == idUsuario</span>
+        <span>And</span>&nbsp;<span>match response.email == cuerpo.email</span>
+      </div>
+    </div>
+    <div class="time-cell passed">3</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.nome == cuerpo.nome</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2:23]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">negativo</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2:23]</span>
+                <span class="scenario-name">Buscar un usuario con un ID que no existe</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>586</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2:23]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2:23]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseUrl</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:23]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def usuarioSchema = read(&#39;classpath:resources/request/usuario-schema.json&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">3</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:23]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def crearUsuario = read(&#39;classpath:resources/helpers/crear-usuario.feature&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">3</div>
   </div>
 
    
@@ -756,7 +812,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">24</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>match response.email == cuerpo.email</span>
+        <span>Given</span>&nbsp;<span>path &#39;usuarios&#39;, &#39;idQueNoExiste123&#39;</span>
       </div>
     </div>
     <div class="time-cell passed">1</div>
@@ -784,195 +840,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">25</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>match response.nome == cuerpo.nome</span>
-      </div>
-    </div>
-    <div class="time-cell passed">2</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-        </div>
-        <div class="scenario">
-          <div class="scenario-heading" id="[2:28]">
-            <div class="heading-container">
-              <div class="scenario-tags">
-                <a class="badge badge-primary" href="karate-tags.html">negativo</a>
-              </div>
-              <div class="scenario-keyword">
-                Scenario: <span>[2:28]</span>
-                <span class="scenario-name">Buscar un usuario con un ID que no existe</span>
-                <span></span>
-              </div>
-            </div>
-            <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>528</span>
-            </div>
-          </div>
-          <div class="step-row">
-            <div class="step-container" id="[2:28]bg">
-              <div class="step-ref bg-step">&gt;&gt;</div>
-              <div class="step-cell passed">Background:</div>
-            </div>
-            <div class="time-cell passed"></div>
-          </div>
-          <div data-parent="[2:28]bg"><div>
-  
-
-  <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment"># URL base definida en karate-config.js</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row">
-    <div class="step-container" id="0.5">
-      <div class="step-ref bg-step">5</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>url baseUrl</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[2:28]bg"><div>
-  
-
-  <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment"># Esquema JSON de un usuario</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row">
-    <div class="step-container" id="0.7">
-      <div class="step-ref bg-step">7</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def usuarioSchema = read(&#39;classpath:schemas/usuario-schema.json&#39;)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[2:28]bg"><div>
-  
-
-  <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment"># Feature reutilizable: crea un usuario y devuelve idUsuario y cuerpoUsuario</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row">
-    <div class="step-container" id="0.9">
-      <div class="step-ref bg-step">9</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def crearUsuario = read(&#39;classpath:helpers/crear-usuario.feature&#39;)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.29">
-      <div class="step-ref passed">29</div>
-      
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;usuarios&#39;, &#39;idQueNoExiste123&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.30">
-      <div class="step-ref passed">30</div>
-      
-      <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method get</span>
       </div>
     </div>
-    <div class="time-cell passed">524</div>
+    <div class="time-cell passed">579</div>
   </div>
 
    
@@ -981,33 +852,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.30">21:30:49.518 request:
-1 &gt; GET https://serverest.dev/usuarios/idQueNoExiste123
-1 &gt; Host: serverest.dev
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.20.1)
-1 &gt; Accept-Encoding: gzip,deflate
-
-
-21:30:50.040 response time in milliseconds: 520
-1 &lt; 400
-1 &lt; access-control-allow-origin: *
-1 &lt; x-dns-prefetch-control: off
-1 &lt; x-frame-options: SAMEORIGIN
-1 &lt; strict-transport-security: max-age=15552000; includeSubDomains
-1 &lt; x-download-options: noopen
-1 &lt; x-content-type-options: nosniff
-1 &lt; x-xss-protection: 1; mode=block
-1 &lt; content-type: application/json; charset=utf-8
-1 &lt; x-cloud-trace-context: 6fd5c2cecff87a2de4e80f2d3dfee6fa
-1 &lt; date: Wed, 04 Nov 2026 02:30:49 GMT
-1 &lt; server: Google Frontend
-1 &lt; Content-Length: 45
-{
-    &quot;message&quot;: &quot;Usuário não encontrado&quot;
-}
-
-</div>   
+     
 
   
 
@@ -1016,18 +861,11 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           <div><div>
   
 
-  <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment"># 400 significa &quot;Petición incorrecta&quot;</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
+  
 
   <div class="step-row">
-    <div class="step-container" id="0.32">
-      <div class="step-ref passed">32</div>
+    <div class="step-container" id="0.26">
+      <div class="step-ref passed">26</div>
       
       <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 400</span>
@@ -1051,24 +889,17 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           <div><div>
   
 
-  <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment"># El mensaje significa: &quot;Usuario no encontrado&quot;</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
+  
 
   <div class="step-row">
-    <div class="step-container" id="0.34">
-      <div class="step-ref passed">34</div>
+    <div class="step-container" id="0.27">
+      <div class="step-ref passed">27</div>
       
       <div class="step-cell passed">
         <span>And</span>&nbsp;<span>match response == { message: &#39;Usuário não encontrado&#39; }</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
