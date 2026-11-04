@@ -26,13 +26,13 @@ Quedaron fuera de alcance el login, los productos y los carritos. La URL y los t
 
 ## 3. Organización del proyecto
 
-Hay un feature por endpoint, dentro de `src/test/java/usuarios`. El runner `UsuariosTest` ejecuta `classpath:usuarios`, así que el helper no aparece como una prueba independiente.
+Hay un feature por endpoint, dentro de `src/test/java/resources/features`. El runner `TestRunner` ejecuta `classpath:resources/features`, así que el helper no aparece como una prueba independiente.
 
 | Pieza | Función |
 | --- | --- |
-| `helpers/DataGenerator.java` | Genera nombre, email y contraseña con un UUID corto |
-| `helpers/crear-usuario.feature` | Hace el POST válido y devuelve `idUsuario` y `cuerpoUsuario` |
-| `schemas/usuario-schema.json` | Describe `_id`, `nome`, `email`, `password` y `administrador` |
+| `karate/util/DataGenerator.java` | Genera nombre, email y contraseña con un UUID corto |
+| `resources/helpers/crear-usuario.feature` | Hace el POST válido y devuelve `idUsuario` y `cuerpoUsuario` |
+| `resources/request/usuario-schema.json` | Describe `_id`, `nome`, `email`, `password` y `administrador` |
 
 Los escenarios que necesitan un usuario previo lo crean con:
 

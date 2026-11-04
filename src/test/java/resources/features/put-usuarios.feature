@@ -1,14 +1,10 @@
 Feature: Actualizar usuario (PUT /usuarios/{_id})
 
 Background:
-  # URL base definida en karate-config.js
   * url baseUrl
-  # Clase Java que genera datos únicos
-  * def Gen = Java.type('helpers.DataGenerator')
-  # Esquema JSON de un usuario, para la consulta de verificación
-  * def usuarioSchema = read('classpath:schemas/usuario-schema.json')
-  # Feature reutilizable: crea un usuario y devuelve idUsuario y cuerpoUsuario
-  * def crearUsuario = read('classpath:helpers/crear-usuario.feature')
+  * def Gen = Java.type('karate.util.DataGenerator')
+  * def usuarioSchema = read('classpath:resources/request/usuario-schema.json')
+  * def crearUsuario = read('classpath:resources/helpers/crear-usuario.feature')
 
 @positivo
 Scenario: Actualizar un usuario existente
@@ -16,17 +12,14 @@ Scenario: Actualizar un usuario existente
   * def idUsuario = creado.idUsuario
   * def cuerpo = creado.cuerpoUsuario
 
-  # Lo actualizamos (cambiamos nombre, password y rol)
   * def nuevoNombre = 'Nombre Actualizado'
   * def cambios = { nome: '#(nuevoNombre)', email: '#(cuerpo.email)', password: 'nuevaPwd456', administrador: 'false' }
   Given path 'usuarios', idUsuario
   And request cambios
   When method put
   Then status 200
-  # El mensaje significa: "Registro modificado con éxito"
   And match response.message == 'Registro alterado com sucesso'
 
-  # Verificamos que el cambio quedó guardado y que el cuerpo cumple el esquema
   Given path 'usuarios', idUsuario
   When method get
   Then status 200
@@ -41,13 +34,11 @@ Scenario: No permite actualizar con el email de otro usuario
   * def uno = call crearUsuario
   * def dos = call crearUsuario
 
-  # Intentamos ponerle al usuario dos el email del usuario uno
   * def cambios = { nome: 'Usuario Dos', email: '#(uno.cuerpoUsuario.email)', password: 'teste123', administrador: 'true' }
   Given path 'usuarios', dos.idUsuario
   And request cambios
   When method put
   Then status 400
-  # El mensaje significa: "Este email ya está siendo usado"
   And match response.message == 'Este email já está sendo usado'
 
 @negativo
@@ -55,9 +46,6 @@ Scenario Outline: Rechaza actualizar con datos inválidos - <caso>
   * def creado = call crearUsuario
   * def idUsuario = creado.idUsuario
 
-  # Los emails son fijos a propósito: la API rechaza el cuerpo antes de guardar
-  # el cambio, así que no hay riesgo de duplicado entre ejecuciones.
-  # Una celda vacía llega como null; la convertimos a texto vacío para probar el campo en blanco.
   * def enBlanco = function(valor){ return valor == null ? '' : valor }
   * def cambios = { nome: '#(enBlanco(nome))', email: '#(enBlanco(email))', password: '#(enBlanco(password))', administrador: '#(enBlanco(admin))' }
   Given path 'usuarios', idUsuario
@@ -65,12 +53,10 @@ Scenario Outline: Rechaza actualizar con datos inválidos - <caso>
   When method put
   Then status 400
   And match response == '#object'
-  # El error llega en el campo que falló, por ejemplo { "nome": "nome não pode ficar em branco" }
   * def mensajeRecibido = response[campoError]
   And match mensajeRecibido == mensajeError
-  # La respuesta debe traer solo ese campo. El arreglo se arma en JavaScript
-  # porque Karate no sustituye la variable dentro de [campoError].
   * def claves = karate.keysOf(response)
+  # Karate no sustituye la variable dentro de [campoError]
   * def claveEsperada = (function(){ return [campoError] })()
   And match claves == claveEsperada
 
@@ -83,18 +69,15 @@ Scenario Outline: Rechaza actualizar con datos inválidos - <caso>
 
 @negativo
 Scenario: PUT con un ID inexistente crea un usuario nuevo
-  # Hallazgo: un PUT a un id que no existe no responde error.
-  # ServeRest crea un usuario nuevo (201) y devuelve un _id distinto al de la ruta.
+  # Un id que no existe no falla: ServeRest crea el usuario y devuelve otro _id
   * def cuerpo = { nome: 'Nuevo Por Put', email: '#(Gen.randomEmail())', password: 'teste123', administrador: 'true' }
   Given path 'usuarios', 'idQueNoExiste123'
   And request cuerpo
   When method put
   Then status 201
-  # El mensaje significa: "Registro realizado con éxito"
   And match response == { message: 'Cadastro realizado com sucesso', _id: '#string' }
   And match response._id != 'idQueNoExiste123'
 
-  # Limpieza: el PUT dejó un usuario real en la API compartida
   * def idCreado = response._id
   Given path 'usuarios', idCreado
   When method delete

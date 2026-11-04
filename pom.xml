@@ -3,23 +3,18 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <!-- Identidad del proyecto (puedes cambiar los nombres) -->
   <groupId>com.reto</groupId>
   <artifactId>serverest-karate</artifactId>
   <version>1.0.0</version>
 
   <properties>
-    <!-- Compilar con Java 17 -->
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
-    <!-- Soporta tildes y ñ en los archivos -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <!-- Versión de Karate, definida una sola vez para reutilizarla -->
     <karate.version>1.4.1</karate.version>
   </properties>
 
   <dependencies>
-    <!-- Librería de Karate integrada con JUnit 5 (el motor que ejecuta los tests) -->
     <dependency>
       <groupId>com.intuit.karate</groupId>
       <artifactId>karate-junit5</artifactId>
@@ -29,8 +24,6 @@
   </dependencies>
 
   <build>
-    <!-- Por defecto Maven ignora archivos que no son .java dentro de src/test/java.
-         Este bloque le dice que SÍ incluya los .feature, .json y .js -->
     <testResources>
       <testResource>
         <directory>src/test/java</directory>
@@ -41,7 +34,6 @@
     </testResources>
 
     <plugins>
-      <!-- Plugin que ejecuta los tests cuando corres "mvn test" -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>

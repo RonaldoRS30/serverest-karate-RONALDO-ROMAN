@@ -2,21 +2,17 @@ Feature: Listar usuarios (GET /usuarios)
 
 Background:
   * url baseUrl
-  * def usuarioSchema = read('classpath:schemas/usuario-schema.json')
-  # Feature reutilizable: crea un usuario y devuelve idUsuario y cuerpoUsuario
-  * def crearUsuario = read('classpath:helpers/crear-usuario.feature')
+  * def usuarioSchema = read('classpath:resources/request/usuario-schema.json')
+  * def crearUsuario = read('classpath:resources/helpers/crear-usuario.feature')
 
 @positivo
 Scenario: Listar todos los usuarios correctamente
   Given path 'usuarios'
   When method get
   Then status 200
-  # "quantidade" significa "cantidad"
   And match response.quantidade == '#number'
   And match response.usuarios == '#[]'
-  # La cantidad informada debe coincidir con el tamaño real de la lista
   And match response.quantidade == response.usuarios.length
-  # Cada usuario de la lista debe cumplir el esquema
   And match each response.usuarios == usuarioSchema
 
 @positivo
@@ -54,8 +50,7 @@ Scenario: Rechaza filtrar por un email con formato inválido
 
 @negativo
 Scenario: Filtrar por un _id inexistente no devuelve error
-  # Hallazgo: GET /usuarios?_id=abc no responde 400.
-  # La API trata el valor como un filtro sin coincidencias y devuelve lista vacía.
+  # Un _id inválido no responde 400: la API lo trata como filtro sin coincidencias
   Given path 'usuarios'
   And param _id = 'abc'
   When method get

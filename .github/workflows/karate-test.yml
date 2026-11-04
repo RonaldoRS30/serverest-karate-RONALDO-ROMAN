@@ -1,0 +1,37 @@
+name: Karate API - CI
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  karate-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+
+      - name: Ejecutar pruebas
+        run: mvn -B test
+
+      - name: Guardar reportes Karate
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: karate-reportes
+          path: karate-reports/
+          if-no-files-found: error
+          retention-days: 7
