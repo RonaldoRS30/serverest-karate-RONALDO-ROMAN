@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <!-- Muestra los mensajes en la consola -->
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{20} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <!-- Solo mostramos mensajes de nivel INFO o superior (oculta el DEBUG de Thymeleaf) -->
+  <root level="INFO">
+    <appender-ref ref="STDOUT" />
+  </root>
+
+  <!-- Los logs de Karate sí los queremos ver en detalle -->
+  <logger name="com.intuit.karate" level="DEBUG" />
+  <!-- Silenciamos a Thymeleaf -->
+  <logger name="org.thymeleaf" level="WARN" />
+</configuration>
