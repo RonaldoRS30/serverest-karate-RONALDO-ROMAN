@@ -1,0 +1,5 @@
+caso,nome,email,password,admin,campoError,mensajeError
+nombre vacio,,a1@test.com,123,true,nome,nome não pode ficar em branco
+email sin formato,Juan,no-es-email,123,true,email,email deve ser um email válido
+password vacio,Juan,a2@test.com,,true,password,password não pode ficar em branco
+admin invalido,Juan,a3@test.com,123,talvez,administrador,administrador deve ser 'true' ou 'false'

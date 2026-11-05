@@ -23,6 +23,10 @@ Scenario: Registrar un usuario con datos válidos
   And match response.email == cuerpo.email
   And match response.nome == cuerpo.nome
 
+  Given path 'usuarios', idUsuario
+  When method delete
+  Then status 200
+
 @negativo
 Scenario: No permite registrar un email duplicado
   * def creado = call crearUsuario
@@ -34,14 +38,13 @@ Scenario: No permite registrar un email duplicado
   And match response.message == 'Este email já está sendo usado'
 
 @negativo
-Scenario Outline: Rechaza datos inválidos - <caso>
+Scenario Outline: Rechaza datos inválidos (CSV) - <caso>
   * def enBlanco = function(valor){ return valor == null ? '' : valor }
   * def cuerpo = { nome: '#(enBlanco(nome))', email: '#(enBlanco(email))', password: '#(enBlanco(password))', administrador: '#(enBlanco(admin))' }
   Given path 'usuarios'
   And request cuerpo
   When method post
   Then status 400
-  And match response == '#object'
   * def mensajeRecibido = response[campoError]
   And match mensajeRecibido == mensajeError
   * def claves = karate.keysOf(response)
@@ -50,8 +53,4 @@ Scenario Outline: Rechaza datos inválidos - <caso>
   And match claves == claveEsperada
 
   Examples:
-    | caso              | nome | email       | password | admin  | campoError    | mensajeError                              |
-    | nombre vacio      |      | a1@test.com | 123      | true   | nome          | nome não pode ficar em branco             |
-    | email sin formato | Juan | no-es-email | 123      | true   | email         | email deve ser um email válido            |
-    | password vacio    | Juan | a2@test.com |          | true   | password      | password não pode ficar em branco         |
-    | admin invalido    | Juan | a3@test.com | 123      | talvez | administrador | administrador deve ser 'true' ou 'false'  |
+    | karate.read('classpath:resources/data/usuarios-invalidos.csv') |

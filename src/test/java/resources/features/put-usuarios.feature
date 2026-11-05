@@ -42,7 +42,7 @@ Scenario: No permite actualizar con el email de otro usuario
   And match response.message == 'Este email já está sendo usado'
 
 @negativo
-Scenario Outline: Rechaza actualizar con datos inválidos - <caso>
+Scenario Outline: Rechaza actualizar con datos inválidos (CSV) - <caso>
   * def creado = call crearUsuario
   * def idUsuario = creado.idUsuario
 
@@ -61,11 +61,7 @@ Scenario Outline: Rechaza actualizar con datos inválidos - <caso>
   And match claves == claveEsperada
 
   Examples:
-    | caso              | nome | email       | password | admin  | campoError    | mensajeError                              |
-    | nombre vacio      |      | b1@test.com | 123      | true   | nome          | nome não pode ficar em branco             |
-    | email sin formato | Juan | no-es-email | 123      | true   | email         | email deve ser um email válido            |
-    | password vacio    | Juan | b2@test.com |          | true   | password      | password não pode ficar em branco         |
-    | admin invalido    | Juan | b3@test.com | 123      | talvez | administrador | administrador deve ser 'true' ou 'false'  |
+    | karate.read('classpath:resources/data/usuarios-invalidos.csv') |
 
 @negativo
 Scenario: PUT con un ID inexistente crea un usuario nuevo

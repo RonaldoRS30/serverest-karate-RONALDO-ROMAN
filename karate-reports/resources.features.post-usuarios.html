@@ -49,7 +49,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div>Scenarios</div>
   </div>
   <div id="nav-date">
-    <div>2026-11-04 05:58:50 a. m.</div>
+    <div>2026-11-05 02:15:38 a. m.</div>
   </div>
 </div>
 
@@ -58,19 +58,19 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
             <a href="#[1:10]"><span>[1:10]</span> <span>Registrar un usuario con datos válidos</span></a>
           </div>
           <div class="nav-item passed">
-            <a href="#[2:27]"><span>[2:27]</span> <span>No permite registrar un email duplicado</span></a>
+            <a href="#[2:31]"><span>[2:31]</span> <span>No permite registrar un email duplicado</span></a>
           </div>
           <div class="nav-item passed">
-            <a href="#[3.1:54]"><span>[3.1:54]</span> <span>Rechaza datos inválidos - nombre vacio</span></a>
+            <a href="#[3.1:56]"><span>[3.1:56]</span> <span>Rechaza datos inválidos (CSV) - nombre vacio</span></a>
           </div>
           <div class="nav-item passed">
-            <a href="#[3.2:55]"><span>[3.2:55]</span> <span>Rechaza datos inválidos - email sin formato</span></a>
+            <a href="#[3.2:56]"><span>[3.2:56]</span> <span>Rechaza datos inválidos (CSV) - email sin formato</span></a>
           </div>
           <div class="nav-item passed">
-            <a href="#[3.3:56]"><span>[3.3:56]</span> <span>Rechaza datos inválidos - password vacio</span></a>
+            <a href="#[3.3:56]"><span>[3.3:56]</span> <span>Rechaza datos inválidos (CSV) - password vacio</span></a>
           </div>
           <div class="nav-item passed">
-            <a href="#[3.4:57]"><span>[3.4:57]</span> <span>Rechaza datos inválidos - admin invalido</span></a>
+            <a href="#[3.4:56]"><span>[3.4:56]</span> <span>Rechaza datos inválidos (CSV) - admin invalido</span></a>
           </div>
         </div>
       </div>
@@ -96,7 +96,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>1066</span>
+              <span>ms:</span>&nbsp;<span>3214</span>
             </div>
           </div>
           <div class="step-row">
@@ -203,7 +203,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def crearUsuario = read(&#39;classpath:resources/helpers/crear-usuario.feature&#39;)</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">3</div>
   </div>
 
    
@@ -315,7 +315,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>When</span>&nbsp;<span>method post</span>
       </div>
     </div>
-    <div class="time-cell passed">519</div>
+    <div class="time-cell passed">1321</div>
   </div>
 
    
@@ -399,7 +399,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def idUsuario = response._id</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">2</div>
   </div>
 
    
@@ -455,7 +455,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>When</span>&nbsp;<span>method get</span>
       </div>
     </div>
-    <div class="time-cell passed">539</div>
+    <div class="time-cell passed">538</div>
   </div>
 
    
@@ -511,7 +511,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>And</span>&nbsp;<span>match response == usuarioSchema</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -582,31 +582,115 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.26">
+      <div class="step-ref passed">26</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;usuarios&#39;, idUsuario</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.27">
+      <div class="step-ref passed">27</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method delete</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1344</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.28">
+      <div class="step-ref passed">28</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[2:27]">
+          <div class="scenario-heading" id="[2:31]">
             <div class="heading-container">
               <div class="scenario-tags">
                 <a class="badge badge-primary" href="karate-tags.html">negativo</a>
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[2:27]</span>
+                Scenario: <span>[2:31]</span>
                 <span class="scenario-name">No permite registrar un email duplicado</span>
                 <span></span>
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>1184</span>
+              <span>ms:</span>&nbsp;<span>1863</span>
             </div>
           </div>
           <div class="step-row">
-            <div class="step-container" id="[2:27]bg">
+            <div class="step-container" id="[2:31]bg">
               <div class="step-ref bg-step">&gt;&gt;</div>
               <div class="step-cell passed">Background:</div>
             </div>
             <div class="time-cell passed"></div>
           </div>
-          <div data-parent="[2:27]bg"><div>
+          <div data-parent="[2:31]bg"><div>
   
 
   
@@ -634,7 +718,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[2:27]bg"><div>
+          <div data-parent="[2:31]bg"><div>
   
 
   
@@ -647,7 +731,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def Gen = Java.type(&#39;karate.util.DataGenerator&#39;)</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -662,7 +746,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[2:27]bg"><div>
+          <div data-parent="[2:31]bg"><div>
   
 
   
@@ -690,7 +774,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[2:27]bg"><div>
+          <div data-parent="[2:31]bg"><div>
   
 
   
@@ -703,7 +787,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def crearUsuario = read(&#39;classpath:resources/helpers/crear-usuario.feature&#39;)</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">2</div>
   </div>
 
    
@@ -724,14 +808,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.28">
-      <div class="step-ref passed">28</div>
+    <div class="step-container" id="0.32">
+      <div class="step-ref passed">32</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def creado = call crearUsuario</span>
       </div>
     </div>
-    <div class="time-cell passed">628</div>
+    <div class="time-cell passed">1350</div>
   </div>
 
    
@@ -745,12 +829,12 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   <div>
         
     <div class="step-row">
-      <div class="step-container" id="0.28.0.call">
+      <div class="step-container" id="0.32.0.call">
         <div class="step-ref passed">&gt;&gt;</div>
         <div class="step-indent"></div>
         <div class="step-cell passed">resources.helpers.crear-usuario</div>
       </div>
-      <div class="time-cell passed">622</div>
+      <div class="time-cell passed">1343</div>
     </div>
     <div>
       <div><div>
@@ -758,8 +842,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="step-row" data-parent="0.28.0.call">
-    <div class="step-container" id="0.28.0.call.0.5">
+  <div class="step-row" data-parent="0.32.0.call">
+    <div class="step-container" id="0.32.0.call.0.5">
       <div class="step-ref passed">5</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
@@ -786,8 +870,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="step-row" data-parent="0.28.0.call">
-    <div class="step-container" id="0.28.0.call.0.6">
+  <div class="step-row" data-parent="0.32.0.call">
+    <div class="step-container" id="0.32.0.call.0.6">
       <div class="step-ref passed">6</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
@@ -814,8 +898,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="step-row" data-parent="0.28.0.call">
-    <div class="step-container" id="0.28.0.call.0.7">
+  <div class="step-row" data-parent="0.32.0.call">
+    <div class="step-container" id="0.32.0.call.0.7">
       <div class="step-ref passed">7</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
@@ -842,8 +926,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="step-row" data-parent="0.28.0.call">
-    <div class="step-container" id="0.28.0.call.0.8">
+  <div class="step-row" data-parent="0.32.0.call">
+    <div class="step-container" id="0.32.0.call.0.8">
       <div class="step-ref passed">8</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
@@ -870,8 +954,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="step-row" data-parent="0.28.0.call">
-    <div class="step-container" id="0.28.0.call.0.9">
+  <div class="step-row" data-parent="0.32.0.call">
+    <div class="step-container" id="0.32.0.call.0.9">
       <div class="step-ref passed">9</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
@@ -898,15 +982,15 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="step-row" data-parent="0.28.0.call">
-    <div class="step-container" id="0.28.0.call.0.10">
+  <div class="step-row" data-parent="0.32.0.call">
+    <div class="step-container" id="0.32.0.call.0.10">
       <div class="step-ref passed">10</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method post</span>
       </div>
     </div>
-    <div class="time-cell passed">618</div>
+    <div class="time-cell passed">1340</div>
   </div>
 
    
@@ -926,15 +1010,15 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="step-row" data-parent="0.28.0.call">
-    <div class="step-container" id="0.28.0.call.0.11">
+  <div class="step-row" data-parent="0.32.0.call">
+    <div class="step-container" id="0.32.0.call.0.11">
       <div class="step-ref passed">11</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 201</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -954,8 +1038,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="step-row" data-parent="0.28.0.call">
-    <div class="step-container" id="0.28.0.call.0.12">
+  <div class="step-row" data-parent="0.32.0.call">
+    <div class="step-container" id="0.32.0.call.0.12">
       <div class="step-ref passed">12</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
@@ -988,8 +1072,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.29">
-      <div class="step-ref passed">29</div>
+    <div class="step-container" id="0.33">
+      <div class="step-ref passed">33</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def segundo = { nome: &#39;Usuario Dos&#39;, email: &#39;#(creado.cuerpoUsuario.email)&#39;, password: &#39;teste123&#39;, administrador: &#39;true&#39; }</span>
@@ -1016,14 +1100,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.30">
-      <div class="step-ref passed">30</div>
+    <div class="step-container" id="0.34">
+      <div class="step-ref passed">34</div>
       
       <div class="step-cell passed">
         <span>Given</span>&nbsp;<span>path &#39;usuarios&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -1044,8 +1128,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.31">
-      <div class="step-ref passed">31</div>
+    <div class="step-container" id="0.35">
+      <div class="step-ref passed">35</div>
       
       <div class="step-cell passed">
         <span>And</span>&nbsp;<span>request segundo</span>
@@ -1072,14 +1156,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.32">
-      <div class="step-ref passed">32</div>
+    <div class="step-container" id="0.36">
+      <div class="step-ref passed">36</div>
       
       <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method post</span>
       </div>
     </div>
-    <div class="time-cell passed">550</div>
+    <div class="time-cell passed">506</div>
   </div>
 
    
@@ -1100,8 +1184,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.33">
-      <div class="step-ref passed">33</div>
+    <div class="step-container" id="0.37">
+      <div class="step-ref passed">37</div>
       
       <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 400</span>
@@ -1128,8 +1212,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.34">
-      <div class="step-ref passed">34</div>
+    <div class="step-container" id="0.38">
+      <div class="step-ref passed">38</div>
       
       <div class="step-cell passed">
         <span>And</span>&nbsp;<span>match response.message == &#39;Este email já está sendo usado&#39;</span>
@@ -1152,29 +1236,29 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 </div>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[3.1:54]">
+          <div class="scenario-heading" id="[3.1:56]">
             <div class="heading-container">
               <div class="scenario-tags">
                 <a class="badge badge-primary" href="karate-tags.html">negativo</a>
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[3.1:54]</span>
-                <span class="scenario-name">Rechaza datos inválidos - nombre vacio</span>
+                Scenario: <span>[3.1:56]</span>
+                <span class="scenario-name">Rechaza datos inválidos (CSV) - nombre vacio</span>
                 <span></span>
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>632</span>
+              <span>ms:</span>&nbsp;<span>1475</span>
             </div>
           </div>
           <div class="step-row">
-            <div class="step-container" id="[3.1:54]bg">
+            <div class="step-container" id="[3.1:56]bg">
               <div class="step-ref bg-step">&gt;&gt;</div>
               <div class="step-cell passed">Background:</div>
             </div>
             <div class="time-cell passed"></div>
           </div>
-          <div data-parent="[3.1:54]bg"><div>
+          <div data-parent="[3.1:56]bg"><div>
   
 
   
@@ -1187,7 +1271,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>url baseUrl</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -1202,7 +1286,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[3.1:54]bg"><div>
+          <div data-parent="[3.1:56]bg"><div>
   
 
   
@@ -1230,7 +1314,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[3.1:54]bg"><div>
+          <div data-parent="[3.1:56]bg"><div>
   
 
   
@@ -1241,34 +1325,6 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def usuarioSchema = read(&#39;classpath:resources/request/usuario-schema.json&#39;)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[3.1:54]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="1.7">
-      <div class="step-ref bg-step">7</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def crearUsuario = read(&#39;classpath:resources/helpers/crear-usuario.feature&#39;)</span>
       </div>
     </div>
     <div class="time-cell passed">2</div>
@@ -1286,104 +1342,20 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div><div>
+          <div data-parent="[3.1:56]bg"><div>
   
 
   
 
   <div class="step-row">
-    <div class="step-container" id="1.38">
-      <div class="step-ref passed">38</div>
+    <div class="step-container" id="1.7">
+      <div class="step-ref bg-step">7</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def enBlanco = function(valor){ return valor == null ? &#39;&#39; : valor }</span>
+        <span>*</span>&nbsp;<span>def crearUsuario = read(&#39;classpath:resources/helpers/crear-usuario.feature&#39;)</span>
       </div>
     </div>
-    <div class="time-cell passed">13</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="1.39">
-      <div class="step-ref passed">39</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def cuerpo = { nome: &#39;#(enBlanco(nome))&#39;, email: &#39;#(enBlanco(email))&#39;, password: &#39;#(enBlanco(password))&#39;, administrador: &#39;#(enBlanco(admin))&#39; }</span>
-      </div>
-    </div>
-    <div class="time-cell passed">3</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="1.40">
-      <div class="step-ref passed">40</div>
-      
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;usuarios&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="1.41">
-      <div class="step-ref passed">41</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>request cuerpo</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -1408,10 +1380,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">42</div>
       
       <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method post</span>
+        <span>*</span>&nbsp;<span>def enBlanco = function(valor){ return valor == null ? &#39;&#39; : valor }</span>
       </div>
     </div>
-    <div class="time-cell passed">587</div>
+    <div class="time-cell passed">14</div>
   </div>
 
    
@@ -1436,10 +1408,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">43</div>
       
       <div class="step-cell passed">
-        <span>Then</span>&nbsp;<span>status 400</span>
+        <span>*</span>&nbsp;<span>def cuerpo = { nome: &#39;#(enBlanco(nome))&#39;, email: &#39;#(enBlanco(email))&#39;, password: &#39;#(enBlanco(password))&#39;, administrador: &#39;#(enBlanco(admin))&#39; }</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">2</div>
   </div>
 
    
@@ -1464,10 +1436,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">44</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>match response == &#39;#object&#39;</span>
+        <span>Given</span>&nbsp;<span>path &#39;usuarios&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">2</div>
   </div>
 
    
@@ -1492,7 +1464,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">45</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def mensajeRecibido = response[campoError]</span>
+        <span>And</span>&nbsp;<span>request cuerpo</span>
       </div>
     </div>
     <div class="time-cell passed">1</div>
@@ -1520,10 +1492,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">46</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>match mensajeRecibido == mensajeError</span>
+        <span>When</span>&nbsp;<span>method post</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">1351</div>
   </div>
 
    
@@ -1548,10 +1520,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">47</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def claves = karate.keysOf(response)</span>
+        <span>Then</span>&nbsp;<span>status 400</span>
       </div>
     </div>
-    <div class="time-cell passed">20</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -1569,24 +1541,45 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           <div><div>
   
 
+  
+
   <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
+    <div class="step-container" id="1.48">
+      <div class="step-ref passed">48</div>
       
-      <div class="step-cell comment"># Karate no sustituye la variable dentro de [campoError]</div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def mensajeRecibido = response[campoError]</span>
+      </div>
     </div>
-    <div class="time-cell comment"></div>            
+    <div class="time-cell passed">4</div>
   </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
 
   <div class="step-row">
     <div class="step-container" id="1.49">
       <div class="step-ref passed">49</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def claveEsperada = (function(){ return [campoError] })()</span>
+        <span>And</span>&nbsp;<span>match mensajeRecibido == mensajeError</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -1611,6 +1604,62 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">50</div>
       
       <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def claves = karate.keysOf(response)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">95</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.52">
+      <div class="step-ref passed">52</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def claveEsperada = (function(){ return [campoError] })()</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.53">
+      <div class="step-ref passed">53</div>
+      
+      <div class="step-cell passed">
         <span>And</span>&nbsp;<span>match claves == claveEsperada</span>
       </div>
     </div>
@@ -1631,29 +1680,29 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 </div>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[3.2:55]">
+          <div class="scenario-heading" id="[3.2:56]">
             <div class="heading-container">
               <div class="scenario-tags">
                 <a class="badge badge-primary" href="karate-tags.html">negativo</a>
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[3.2:55]</span>
-                <span class="scenario-name">Rechaza datos inválidos - email sin formato</span>
+                Scenario: <span>[3.2:56]</span>
+                <span class="scenario-name">Rechaza datos inválidos (CSV) - email sin formato</span>
                 <span></span>
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>639</span>
+              <span>ms:</span>&nbsp;<span>1363</span>
             </div>
           </div>
           <div class="step-row">
-            <div class="step-container" id="[3.2:55]bg">
+            <div class="step-container" id="[3.2:56]bg">
               <div class="step-ref bg-step">&gt;&gt;</div>
               <div class="step-cell passed">Background:</div>
             </div>
             <div class="time-cell passed"></div>
           </div>
-          <div data-parent="[3.2:55]bg"><div>
+          <div data-parent="[3.2:56]bg"><div>
   
 
   
@@ -1681,7 +1730,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[3.2:55]bg"><div>
+          <div data-parent="[3.2:56]bg"><div>
   
 
   
@@ -1694,7 +1743,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def Gen = Java.type(&#39;karate.util.DataGenerator&#39;)</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">3</div>
   </div>
 
    
@@ -1709,7 +1758,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[3.2:55]bg"><div>
+          <div data-parent="[3.2:56]bg"><div>
   
 
   
@@ -1737,7 +1786,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[3.2:55]bg"><div>
+          <div data-parent="[3.2:56]bg"><div>
   
 
   
@@ -1771,126 +1820,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="2.38">
-      <div class="step-ref passed">38</div>
+    <div class="step-container" id="2.42">
+      <div class="step-ref passed">42</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def enBlanco = function(valor){ return valor == null ? &#39;&#39; : valor }</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="2.39">
-      <div class="step-ref passed">39</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def cuerpo = { nome: &#39;#(enBlanco(nome))&#39;, email: &#39;#(enBlanco(email))&#39;, password: &#39;#(enBlanco(password))&#39;, administrador: &#39;#(enBlanco(admin))&#39; }</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="2.40">
-      <div class="step-ref passed">40</div>
-      
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;usuarios&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="2.41">
-      <div class="step-ref passed">41</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>request cuerpo</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="2.42">
-      <div class="step-ref passed">42</div>
-      
-      <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method post</span>
-      </div>
-    </div>
-    <div class="time-cell passed">635</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -1915,10 +1852,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">43</div>
       
       <div class="step-cell passed">
-        <span>Then</span>&nbsp;<span>status 400</span>
+        <span>*</span>&nbsp;<span>def cuerpo = { nome: &#39;#(enBlanco(nome))&#39;, email: &#39;#(enBlanco(email))&#39;, password: &#39;#(enBlanco(password))&#39;, administrador: &#39;#(enBlanco(admin))&#39; }</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">3</div>
   </div>
 
    
@@ -1943,7 +1880,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">44</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>match response == &#39;#object&#39;</span>
+        <span>Given</span>&nbsp;<span>path &#39;usuarios&#39;</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -1971,7 +1908,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">45</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def mensajeRecibido = response[campoError]</span>
+        <span>And</span>&nbsp;<span>request cuerpo</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -1999,10 +1936,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">46</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>match mensajeRecibido == mensajeError</span>
+        <span>When</span>&nbsp;<span>method post</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">1349</div>
   </div>
 
    
@@ -2027,7 +1964,35 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">47</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def claves = karate.keysOf(response)</span>
+        <span>Then</span>&nbsp;<span>status 400</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.48">
+      <div class="step-ref passed">48</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def mensajeRecibido = response[campoError]</span>
       </div>
     </div>
     <div class="time-cell passed">1</div>
@@ -2048,21 +2013,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           <div><div>
   
 
-  <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment"># Karate no sustituye la variable dentro de [campoError]</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
+  
 
   <div class="step-row">
     <div class="step-container" id="2.49">
       <div class="step-ref passed">49</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def claveEsperada = (function(){ return [campoError] })()</span>
+        <span>And</span>&nbsp;<span>match mensajeRecibido == mensajeError</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -2088,6 +2046,62 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   <div class="step-row">
     <div class="step-container" id="2.50">
       <div class="step-ref passed">50</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def claves = karate.keysOf(response)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.52">
+      <div class="step-ref passed">52</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def claveEsperada = (function(){ return [campoError] })()</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.53">
+      <div class="step-ref passed">53</div>
       
       <div class="step-cell passed">
         <span>And</span>&nbsp;<span>match claves == claveEsperada</span>
@@ -2117,12 +2131,12 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
               </div>
               <div class="scenario-keyword">
                 Scenario: <span>[3.3:56]</span>
-                <span class="scenario-name">Rechaza datos inválidos - password vacio</span>
+                <span class="scenario-name">Rechaza datos inválidos (CSV) - password vacio</span>
                 <span></span>
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>711</span>
+              <span>ms:</span>&nbsp;<span>1478</span>
             </div>
           </div>
           <div class="step-row">
@@ -2173,7 +2187,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def Gen = Java.type(&#39;karate.util.DataGenerator&#39;)</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -2201,7 +2215,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def usuarioSchema = read(&#39;classpath:resources/request/usuario-schema.json&#39;)</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">2</div>
   </div>
 
    
@@ -2229,119 +2243,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def crearUsuario = read(&#39;classpath:resources/helpers/crear-usuario.feature&#39;)</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="3.38">
-      <div class="step-ref passed">38</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def enBlanco = function(valor){ return valor == null ? &#39;&#39; : valor }</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="3.39">
-      <div class="step-ref passed">39</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def cuerpo = { nome: &#39;#(enBlanco(nome))&#39;, email: &#39;#(enBlanco(email))&#39;, password: &#39;#(enBlanco(password))&#39;, administrador: &#39;#(enBlanco(admin))&#39; }</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="3.40">
-      <div class="step-ref passed">40</div>
-      
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;usuarios&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="3.41">
-      <div class="step-ref passed">41</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>request cuerpo</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">3</div>
   </div>
 
    
@@ -2366,10 +2268,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">42</div>
       
       <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method post</span>
+        <span>*</span>&nbsp;<span>def enBlanco = function(valor){ return valor == null ? &#39;&#39; : valor }</span>
       </div>
     </div>
-    <div class="time-cell passed">706</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -2394,10 +2296,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">43</div>
       
       <div class="step-cell passed">
-        <span>Then</span>&nbsp;<span>status 400</span>
+        <span>*</span>&nbsp;<span>def cuerpo = { nome: &#39;#(enBlanco(nome))&#39;, email: &#39;#(enBlanco(email))&#39;, password: &#39;#(enBlanco(password))&#39;, administrador: &#39;#(enBlanco(admin))&#39; }</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">2</div>
   </div>
 
    
@@ -2422,7 +2324,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">44</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>match response == &#39;#object&#39;</span>
+        <span>Given</span>&nbsp;<span>path &#39;usuarios&#39;</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -2450,7 +2352,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">45</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def mensajeRecibido = response[campoError]</span>
+        <span>And</span>&nbsp;<span>request cuerpo</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -2478,10 +2380,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">46</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>match mensajeRecibido == mensajeError</span>
+        <span>When</span>&nbsp;<span>method post</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">1466</div>
   </div>
 
    
@@ -2506,10 +2408,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">47</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def claves = karate.keysOf(response)</span>
+        <span>Then</span>&nbsp;<span>status 400</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -2527,21 +2429,42 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           <div><div>
   
 
+  
+
   <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
+    <div class="step-container" id="3.48">
+      <div class="step-ref passed">48</div>
       
-      <div class="step-cell comment"># Karate no sustituye la variable dentro de [campoError]</div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def mensajeRecibido = response[campoError]</span>
+      </div>
     </div>
-    <div class="time-cell comment"></div>            
+    <div class="time-cell passed">2</div>
   </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
 
   <div class="step-row">
     <div class="step-container" id="3.49">
       <div class="step-ref passed">49</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def claveEsperada = (function(){ return [campoError] })()</span>
+        <span>And</span>&nbsp;<span>match mensajeRecibido == mensajeError</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -2569,6 +2492,62 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">50</div>
       
       <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def claves = karate.keysOf(response)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.52">
+      <div class="step-ref passed">52</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def claveEsperada = (function(){ return [campoError] })()</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.53">
+      <div class="step-ref passed">53</div>
+      
+      <div class="step-cell passed">
         <span>And</span>&nbsp;<span>match claves == claveEsperada</span>
       </div>
     </div>
@@ -2589,29 +2568,29 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 </div>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[3.4:57]">
+          <div class="scenario-heading" id="[3.4:56]">
             <div class="heading-container">
               <div class="scenario-tags">
                 <a class="badge badge-primary" href="karate-tags.html">negativo</a>
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[3.4:57]</span>
-                <span class="scenario-name">Rechaza datos inválidos - admin invalido</span>
+                Scenario: <span>[3.4:56]</span>
+                <span class="scenario-name">Rechaza datos inválidos (CSV) - admin invalido</span>
                 <span></span>
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>604</span>
+              <span>ms:</span>&nbsp;<span>1339</span>
             </div>
           </div>
           <div class="step-row">
-            <div class="step-container" id="[3.4:57]bg">
+            <div class="step-container" id="[3.4:56]bg">
               <div class="step-ref bg-step">&gt;&gt;</div>
               <div class="step-cell passed">Background:</div>
             </div>
             <div class="time-cell passed"></div>
           </div>
-          <div data-parent="[3.4:57]bg"><div>
+          <div data-parent="[3.4:56]bg"><div>
   
 
   
@@ -2639,7 +2618,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[3.4:57]bg"><div>
+          <div data-parent="[3.4:56]bg"><div>
   
 
   
@@ -2667,7 +2646,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[3.4:57]bg"><div>
+          <div data-parent="[3.4:56]bg"><div>
   
 
   
@@ -2680,7 +2659,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def usuarioSchema = read(&#39;classpath:resources/request/usuario-schema.json&#39;)</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">2</div>
   </div>
 
    
@@ -2695,7 +2674,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[3.4:57]bg"><div>
+          <div data-parent="[3.4:56]bg"><div>
   
 
   
@@ -2708,7 +2687,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def crearUsuario = read(&#39;classpath:resources/helpers/crear-usuario.feature&#39;)</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">2</div>
   </div>
 
    
@@ -2729,8 +2708,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="4.38">
-      <div class="step-ref passed">38</div>
+    <div class="step-container" id="4.42">
+      <div class="step-ref passed">42</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def enBlanco = function(valor){ return valor == null ? &#39;&#39; : valor }</span>
@@ -2757,123 +2736,11 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="4.39">
-      <div class="step-ref passed">39</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def cuerpo = { nome: &#39;#(enBlanco(nome))&#39;, email: &#39;#(enBlanco(email))&#39;, password: &#39;#(enBlanco(password))&#39;, administrador: &#39;#(enBlanco(admin))&#39; }</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="4.40">
-      <div class="step-ref passed">40</div>
-      
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;usuarios&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="4.41">
-      <div class="step-ref passed">41</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>request cuerpo</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="4.42">
-      <div class="step-ref passed">42</div>
-      
-      <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method post</span>
-      </div>
-    </div>
-    <div class="time-cell passed">600</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
     <div class="step-container" id="4.43">
       <div class="step-ref passed">43</div>
       
       <div class="step-cell passed">
-        <span>Then</span>&nbsp;<span>status 400</span>
+        <span>*</span>&nbsp;<span>def cuerpo = { nome: &#39;#(enBlanco(nome))&#39;, email: &#39;#(enBlanco(email))&#39;, password: &#39;#(enBlanco(password))&#39;, administrador: &#39;#(enBlanco(admin))&#39; }</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -2901,7 +2768,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">44</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>match response == &#39;#object&#39;</span>
+        <span>Given</span>&nbsp;<span>path &#39;usuarios&#39;</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -2929,7 +2796,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">45</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def mensajeRecibido = response[campoError]</span>
+        <span>And</span>&nbsp;<span>request cuerpo</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -2957,10 +2824,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">46</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>match mensajeRecibido == mensajeError</span>
+        <span>When</span>&nbsp;<span>method post</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">1333</div>
   </div>
 
    
@@ -2985,6 +2852,90 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">47</div>
       
       <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 400</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.48">
+      <div class="step-ref passed">48</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def mensajeRecibido = response[campoError]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.49">
+      <div class="step-ref passed">49</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match mensajeRecibido == mensajeError</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.50">
+      <div class="step-ref passed">50</div>
+      
+      <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def claves = karate.keysOf(response)</span>
       </div>
     </div>
@@ -3006,18 +2957,11 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           <div><div>
   
 
-  <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment"># Karate no sustituye la variable dentro de [campoError]</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
+  
 
   <div class="step-row">
-    <div class="step-container" id="4.49">
-      <div class="step-ref passed">49</div>
+    <div class="step-container" id="4.52">
+      <div class="step-ref passed">52</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def claveEsperada = (function(){ return [campoError] })()</span>
@@ -3044,8 +2988,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="4.50">
-      <div class="step-ref passed">50</div>
+    <div class="step-container" id="4.53">
+      <div class="step-ref passed">53</div>
       
       <div class="step-cell passed">
         <span>And</span>&nbsp;<span>match claves == claveEsperada</span>

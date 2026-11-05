@@ -1,13 +1,21 @@
 package karate.runner;
 
-import com.intuit.karate.junit5.Karate;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+
+import com.intuit.karate.Results;
+import com.intuit.karate.Runner;
 
 class TestRunner {
 
-    @Karate.Test
-    Karate testUsuarios() {
-        return Karate.run("classpath:resources/features")
+    @Test
+    void testUsuarios() {
+        Results results = Runner.path("classpath:resources/features")
                 .reportDir("karate-reports")
-                .backupReportDir(false);
+                .backupReportDir(false)
+                .parallel(5);
+
+        assertEquals(0, results.getFailCount(), results.getErrorMessages());
     }
 }
